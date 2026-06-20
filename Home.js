@@ -1,5 +1,5 @@
 const User = require("./Classes/Class");
-const addEmployee = require("./Common Function/Add");
+const addEmployees = require("./Common Function/Add");
 const updateEmployees = require("./Common Function/Edit");
 const deleteEmployees = require("./Common Function/Delete");
 const searchEmployees = require("./Common Function/Search");
@@ -35,7 +35,9 @@ async function main() {
 
         switch (choices) { 
             case "1":
-                addEmployee(employees);
+                const addEmployee = await ask("Add employee details: ");
+                addEmployee(employees,addEmployee);
+                console.log("");
                 break;
             case "2":
                 const updateEmployee = await ask("Update employee details: ");
