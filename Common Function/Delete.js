@@ -3,20 +3,17 @@ function deleteEmployees(employees, query) {
         if (employees.length === 0) {
             console.log("Employee is not found");
             return;
-        }
-
-        const index = employees.findIndex((employee) =>
-            employee.id === Number(query) || employee.name.toLowerCase().includes(query.toLowerCase()
-        ));
-
-        if (index !== -1) {
-            const removed = employees.splice(index, 1);
-            console.log("\n=== Employee Deleted ===");
-            console.log(`Name: ${removed[0].name}, Age: ${removed[0].age}, Email: ${removed[0].email}, Number: ${removed[0].number}`);
         } else {
-            console.log("Employee not found");
-        }
+            const foundEmployee = employees.findIndex((employee) =>
+                employee.id === Number(query) || employee.name.toLowerCase().includes(query.toLowerCase()
+            ));
 
+            if (foundEmployee !== -1) {
+                const removed = employees.splice(index, 1);
+                console.log("\n=== Employee Deleted ===");
+                console.log(`Name: ${removed[0].name}, Age: ${removed[0].age}, Email: ${removed[0].email}, Number: ${removed[0].number}`);
+            }
+        }
     } catch (error) {
         console.log("Error deleting employees:", error);
     }
@@ -24,5 +21,5 @@ function deleteEmployees(employees, query) {
 
 module.exports = deleteEmployees;
 
-//findIndex: get position -> delete/update
-//splice: remove/change -> delete
+//findIndex: Returns the index (position)
+//splice: Used to add, remove, or replace elements in an array — and it changes the original array.

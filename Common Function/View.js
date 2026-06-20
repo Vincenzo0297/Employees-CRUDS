@@ -5,6 +5,7 @@ function viewAllEmployees(employees) {
             return;
         } else {
            console.log("\n=== View All Employees ===");
+           
            employees.forEach((employee, index) => {
                 console.log(`${index + 1}. Name: ${employee.name}, Age: ${employee.age},  Email: ${employee.email}, Number: ${employee.number}`);
            });
