@@ -77,3 +77,17 @@ main();
 // Allows you write asynchronous code in a synchronous manner
 // Async doesn't have resolve or reject parameters
 // Everything after Await is placed in an event queue
+
+
+
+
+
+
+//const → cannot reassign or redeclare
+//const → use by default (value won’t be reassigned)
+
+//let → can reassign, cannot redeclare
+//let → use if the value will change
+
+//var → can redeclare and reassign (can accidentally overwrite)
+//var → avoid (old, can cause bugs)
