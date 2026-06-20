@@ -1,0 +1,55 @@
+class user {
+    constructor(name, age, email, number){
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.number = number;
+    }
+
+    getName() {
+       return this.name;
+    }
+
+    setName(name) {
+        this.name = name;
+    }
+
+    getAge() {
+        return this.age;
+    }
+
+    setAge(age) {
+        this.age = age;
+    }
+
+    getEmail() {
+        return this.email;
+    }
+
+    setEmail(email) {
+        this.email = email;
+    }
+
+    getNumber() {
+        return this.number;
+    }
+
+    setNumber(number) {
+        this.number = number;
+    }
+
+    printInfo(){
+        console.log(`Name: ${this.name}`);
+        console.log(`Age: ${this.age}`);
+        console.log(`Email: ${this.email}`);
+        console.log(`Number: ${this.number}`);
+    }
+}
+module.exports = user;
+
+
+
+
+// test it
+// const User = new user("John", 25, "john@example.com", "12345678");
+// User.printInfo();
