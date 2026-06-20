@@ -28,45 +28,52 @@ async function main() {
     let choices;
     let employees = [];
 
-    do {
-        menu();
+    try {
+        do {
+            menu();
 
-        choices = await ask("Choose: "); 
+            choices = await ask("Choose: "); 
 
-        switch (choices) { 
-            case "1":
-                const addEmployee = await ask("Add employee details: ");
-                addEmployee(employees,addEmployee);
-                console.log("");
-                break;
-            case "2":
-                const updateEmployee = await ask("Update employee details: ");
-                updateEmployee(employees, updateEmployee);
-                console.log("");
-                break;
-            case "3":
-                const deleteEmployee = await ask("Delete employee name: ");
-                deleteEmployees(employees, deleteEmployee);
-                console.log("");
-                break;
-            case "4":
-                const search = await ask("Search for employee by Name: ");
-                searchEmployees(employees, search);
-                console.log("");
-                break;
-            case "5":
-                viewAllEmployees(employees);
-                console.log("");
-                break;
-            case "6":
-                console.log("Bye");
-                rl.close();
-                break;
-            default:
-                console.log("Invalid Choice");
-        }
+            switch (choices) { 
+                case "1":
+                    const name = await ask("Enter employee name: ");
+                    const age = await ask("Enter employee age: ");
+                    const email = await ask("Enter employee email: ");
+                    const number = await ask("Enter employee number: ");
 
-    } while (choices !== "6");
+                    const queryAdd = new User(name, age, email, number);
+                    addEmployees(employees, queryAdd);
+                    console.log("");
+                    break;
+                case "2":
+                    console.log("");
+                    break;
+                case "3":
+                    const queryDelete = await ask("Delete employee name: ");
+                    deleteEmployees(employees, queryDelete);
+                    console.log("");
+                    break;
+                case "4":
+                    const querySearch = await ask("Search for employee by Name: ");
+                    searchEmployees(employees, querySearch);
+                    console.log("");
+                    break;
+                case "5":
+                    viewAllEmployees(employees);
+                    console.log("");
+                    break;
+                case "6":
+                    console.log("Bye");
+                    rl.close();
+                    break;
+                default:
+                    console.log("Invalid Choice");
+                    console.log("");
+            }
+        } while (choices !== "6");
+    } catch (error) {
+        console.log("Error input, please try again", error);
+    }
 }
 
 main();
@@ -91,3 +98,10 @@ main();
 
 //var → can redeclare and reassign (can accidentally overwrite)
 //var → avoid (old, can cause bugs)
+
+
+// do while loop -> Always runs at least once, then repeats as long as a condition is true.
+// for loop -> How many times you want to loop.
+// while loop -> Don’t know how many times, but have a condition.
+// for of loop -> Looping over arrays or lists.
+// for in loop -> Looping over object properties.

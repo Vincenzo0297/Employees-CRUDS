@@ -4,14 +4,16 @@ function deleteEmployees(employees, query) {
             console.log("Employee is not found");
             return;
         } else {
-            const foundEmployee = employees.findIndex((employee) =>
-                employee.id === Number(query) || employee.name.toLowerCase().includes(query.toLowerCase()
+            const foundEmployee = employees.findIndex(
+                (employee) => employee.id === Number(query) || employee.name.toLowerCase().includes(query.toLowerCase()
             ));
 
             if (foundEmployee !== -1) {
-                const removed = employees.splice(index, 1);
+                const removed = employees.splice(foundEmployee, 1);
                 console.log("\n=== Employee Deleted ===");
                 console.log(`Name: ${removed[0].name}, Age: ${removed[0].age}, Email: ${removed[0].email}, Number: ${removed[0].number}`);
+            } else {
+                console.log("Employee is not found");
             }
         }
     } catch (error) {

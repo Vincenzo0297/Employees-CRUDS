@@ -45,6 +45,7 @@ class user {
         console.log(`Number: ${this.number}`);
     }
 }
+
 module.exports = user;
 
 
