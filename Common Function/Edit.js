@@ -33,7 +33,7 @@ function updateStudents(Students, searchName, updateAge, updateEmail, updateNumb
             return;
         } else {
             const foundStudent = Students.find(
-                (student) => student.name.toLowerCase().includes(query.toLowerCase())
+                (student) => student.name.toLowerCase().includes(searchName.toLowerCase())
             );
 
             if (foundStudent) {
