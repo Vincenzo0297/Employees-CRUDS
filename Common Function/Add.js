@@ -1,6 +1,6 @@
-function addEmployees(employees, employee) {
+function addStudents(Students, student) {
     try {
-        const {name, age, email, number} = employee;
+        const {name, age, email, number} = student;
         let isValid = true;
 
         const nameRegex = /^[A-Za-z\s]+$/;
@@ -28,13 +28,13 @@ function addEmployees(employees, employee) {
         }
 
         if (isValid) {
-            employees.push(employee);
+            Students.push(student);
         }
     } catch(error) {
-        console.log("Error adding the employee details", error);
+        console.log("Error adding the student details", error);
     }
 }
 
-module.exports = addEmployees;
+module.exports = addStudents;
 
 //push -> add something to the end of an array.

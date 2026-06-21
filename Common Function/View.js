@@ -1,21 +1,21 @@
-function viewAllEmployees(employees) {
+function viewAllStudents(Students) {
     try {
-        if (employees.length === 0) {
-            console.log("No employee is found");
+        if (Students.length === 0) {
+            console.log("No student is found");
             return;
         } else {
-           console.log("\n=== View All Employees ===");
+           console.log("\n=== View All Students ===");
            
-           employees.forEach((employee, index) => {
-                console.log(`${index + 1}. Name: ${employee.name}, Age: ${employee.age},  Email: ${employee.email}, Number: ${employee.number}`);
+           Students.forEach((student, index) => {
+                console.log(`${index + 1}. Name: ${student.name}, Age: ${student.age},  Email: ${student.email}, Number: ${student.number}`);
            });
         }
     } catch (error) {
-        console.log("Error viewing the employees", error);
+        console.log("Error viewing the student", error);
     }
 }
 
-module.exports = viewAllEmployees;
+module.exports = viewAllStudents;
 
 //length: count item -> check empty
 //forEach: loop item -> print all

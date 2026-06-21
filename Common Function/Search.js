@@ -1,26 +1,26 @@
-function searchEmployee(employees, query) {
+function searchStudents(Students, query) {
     try {
-        if(employees.length === 0) {
-            console.log("Employee is not found");
+        if(Students.length === 0) {
+            console.log("Student is not found");
             return;
         } else {
-            const foundEmployee = employees.find(
-                (employee) => employee.name.toLowerCase().includes(query.toLowerCase())
+            const foundStudent = Students.find(
+                (student) => student.name.toLowerCase().includes(query.toLowerCase())
             );
 
-            if (foundEmployee) {
+            if (foundStudent) {
                 console.log("\n=== Search Employee ===");
-                console.log(`Name: ${foundEmployee.name}, Age: ${foundEmployee.age}, Email: ${foundEmployee.email}, Number: ${foundEmployee.number}`);
+                console.log(`Name: ${foundStudent.name}, Age: ${foundStudent.age}, Email: ${foundStudent.email}, Number: ${foundStudent.number}`);
             } else {
-                console.log("Employee is not found");
+                console.log("Student is not found");
             }
         }
     } catch(error) {
-        console.log("Error searching for employees", error);
+        console.log("Error searching for Student", error);
     }
 }
 
-module.exports = searchEmployee;
+module.exports = searchStudents;
 
 //find: Returns the value
 //include: check text -> partial search

@@ -1,9 +1,9 @@
 const User = require("./Classes/Class");
-const addEmployees = require("./Common Function/Add");
+const addStudents = require("./Common Function/Add");
 const updateEmployees = require("./Common Function/Edit");
-const deleteEmployees = require("./Common Function/Delete");
-const searchEmployees = require("./Common Function/Search");
-const viewAllEmployees = require("./Common Function/View");
+const deleteStudents = require("./Common Function/Delete");
+const searchStudents = require("./Common Function/Search");
+const viewAllStudents = require("./Common Function/View");
 
 // Import the readline module (built-in Node.js module for CLI input/output)
 const readline = require("readline");
@@ -19,17 +19,17 @@ function ask(question) {
 }
 
 function menu() {
-    console.log("1) Add Employee");
-    console.log("2) Update Employee");
-    console.log("3) Delete Employee");
-    console.log("4) Search Employee");
-    console.log("5) View All Employee");
+    console.log("1) Add Student");
+    console.log("2) Update Student");
+    console.log("3) Delete Student");
+    console.log("4) Search Student");
+    console.log("5) View All Student");
     console.log("6) Exit");
 }
 
 async function main() {  
     let choices;
-    let employees = []; //Creates an empty space ready to store data.
+    let students = []; //Creates an empty space ready to store data.
 
     try {
         do {
@@ -39,30 +39,30 @@ async function main() {
 
             switch (choices) { 
                 case "1":
-                    const name = await ask("Enter employee name: ");
-                    const age = await ask("Enter employee age: ");
-                    const email = await ask("Enter employee email: ");
-                    const number = await ask("Enter employee number: ");
+                    const name = await ask("Enter Student name: ");
+                    const age = await ask("Enter Student age: ");
+                    const email = await ask("Enter Student email: ");
+                    const number = await ask("Enter Student number: ");
 
                     const queryAdd = new User(name, age, email, number);
-                    addEmployees(employees, queryAdd);
+                    addStudents(students, queryAdd);
                     console.log("");
                     break;
                 case "2":
                     console.log("");
                     break;
                 case "3":
-                    const queryDelete = await ask("Delete employee name: ");
-                    deleteEmployees(employees, queryDelete);
+                    const queryDelete = await ask("Delete Student name: ");
+                    deleteStudents(students, queryDelete);
                     console.log("");
                     break;
                 case "4":
-                    const querySearch = await ask("Search for employee by Name: ");
-                    searchEmployees(employees, querySearch);
+                    const querySearch = await ask("Search for Student by Name: ");
+                    searchStudents(students, querySearch);
                     console.log("");
                     break;
                 case "5":
-                    viewAllEmployees(employees);
+                    viewAllStudents(students);
                     console.log("");
                     break;
                 case "6":
