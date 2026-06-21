@@ -47,10 +47,3 @@ class user {
 }
 
 module.exports = user;
-
-
-
-
-// test it
-// const User = new user("John", 25, "john@example.com", "12345678");
-// User.printInfo();

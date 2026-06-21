@@ -80,31 +80,3 @@ async function main() {
 }
 
 main();
-
-// Async = makes a function return a promise
-// Await = makes an async function wait for a promise
-
-// Allows you write asynchronous code in a synchronous manner
-// Async doesn't have resolve or reject parameters
-// Everything after Await is placed in an event queue
-
-
-
-
-
-
-//const → cannot reassign or redeclare -> most common
-//const → use by default (value won’t be reassigned)
-
-//let → can reassign, cannot redeclare -> most common
-//let → use if the value will change
-
-//var → can redeclare and reassign (can accidentally overwrite)
-//var → avoid (old, can cause bugs)
-
-
-// do while loop -> Always runs at least once, then repeats as long as a condition is true.
-// for loop -> How many times you want to loop.
-// while loop -> Don’t know how many times, but have a condition.
-// for of loop -> Looping over arrays or lists.
-// for in loop -> Looping over object properties.

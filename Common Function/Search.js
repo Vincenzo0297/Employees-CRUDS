@@ -21,6 +21,3 @@ function searchStudents(Students, query) {
 }
 
 module.exports = searchStudents;
-
-//find: Returns the value
-//include: check text -> partial search

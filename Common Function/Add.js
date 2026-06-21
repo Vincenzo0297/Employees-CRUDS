@@ -36,5 +36,3 @@ function addStudents(Students, student) {
 }
 
 module.exports = addStudents;
-
-//push -> add something to the end of an array.

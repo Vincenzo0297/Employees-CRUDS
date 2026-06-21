@@ -22,6 +22,3 @@ function deleteStudents(Students, query) {
 }
 
 module.exports = deleteStudents;
-
-//findIndex: Returns the index (position)
-//splice: Used to add, remove, or replace elements in an array — and it changes the original array.

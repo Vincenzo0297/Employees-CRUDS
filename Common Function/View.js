@@ -16,10 +16,3 @@ function viewAllStudents(Students) {
 }
 
 module.exports = viewAllStudents;
-
-//length: count item -> check empty
-//forEach: loop item -> print all
-            
-        
-
-     
