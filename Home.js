@@ -59,7 +59,7 @@ async function main() {
                         searchName,
                         updateAge,
                         updateEmail,
-                        updateNumber
+                        updateNumber,
                     );
 
                     console.log("");
