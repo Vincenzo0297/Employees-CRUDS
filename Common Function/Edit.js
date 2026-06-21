@@ -1,6 +1,6 @@
 function updateStudents(Students, queryUpdate, searchName) {
     try {
-        const { updateAge, updateEmail, updateNumber } = queryUpdate;
+        const { age, email, number } = queryUpdate;
 
         const foundStudent = Students.find(
             student => student.name.toLowerCase() === searchName.toLowerCase()
@@ -11,9 +11,9 @@ function updateStudents(Students, queryUpdate, searchName) {
             return;
         }
 
-        foundStudent.age = updateAge;
-        foundStudent.email = updateEmail;
-        foundStudent.number = updateNumber;
+        foundStudent.age = age;
+        foundStudent.email = email;
+        foundStudent.number = number;
 
         console.log("\n=== Student Updated ===");
         console.log(foundStudent);
@@ -25,7 +25,6 @@ function updateStudents(Students, queryUpdate, searchName) {
 }
 
 module.exports = updateStudents;
-
 
 
 
