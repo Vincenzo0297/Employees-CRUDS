@@ -53,14 +53,15 @@ async function main() {
                     const updateAge = await ask("Update Student age: ");
                     const updateEmail = await ask("Update Student email: ");
                     const updateNumber = await ask("Update Student number: ");
-                    //Update undefine
-                    const queryUpdate = {
-                        age: updateAge,
-                        email: updateEmail,
-                        number: updateNumber
-                    };
 
-                    updateStudents(students, queryUpdate, searchName);
+                    updateStudents(
+                        students,
+                        searchName,
+                        updateAge,
+                        updateEmail,
+                        updateNumber
+                    );
+
                     console.log("");
                     break;
                 case "3":
